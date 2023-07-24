@@ -40,6 +40,10 @@ Module.register('MMM-ComeFollowMeThisWeek', {
 		return ["moment.js"]
 	},
 
+	getStyles: function() {
+		return ["custom.css"];
+	},
+
 	// Override dom generator.
 	getDom: function () {
 		var getText = () => {
