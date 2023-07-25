@@ -1,56 +1,55 @@
-# MMM-TextPerWeek
-A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that shows a different text (or image or anything really) each week.
+# MMM-ComeFollowMeThisWeek
+A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that shows the current "Come, Follow Me" lesson for the week (WIP). Forked from [MMM-TextPerWeek0(https://github.com/retroflex/MMM-TextPerWeek).
 
 Thanks to [eouia](https://github.com/eouia) for writing the actual code! My contribution was just to upload it here on GitHub in case anyone else finds it useful.
 
-# Installation
+## Installation
 1. Clone repo:
 ```
 	cd MagicMirror/modules/
-	git clone https://github.com/retroflex/MMM-TextPerWeek
+	git clone https://github.com/retroflex/MMM-ComeFollowMeThisWeek
 ```
 
 2. Add the module to the ../MagicMirror/config/config.js.
 
-# Examples
+## Examples
 Example showing a letter each week, starting at week 7. For weeks other that 7-10, nothing ('') is shown.
 
-![screenshot](https://user-images.githubusercontent.com/25268023/74150499-50f77500-4c0a-11ea-856f-99b35e621e90.png)
-```
+Using the defaults (which are the rest of the lessons for 2023):
+```js
 {
-  module: 'MMM-TextPerWeek',
+  module: 'MMM-ComeFollowMeThisWeek',
   position: 'bottom_right',
-  header: 'Letter of the Week',
-  config: {
-    texts: {
-      'default': '',
-      7: 'A',
-      8: 'B',
-      9: 'C',
-      10: 'D'
-    }
-  }
+  header: 'Come Follow Me This Week',
 }
 ```
 
-<br />
-Example with images and text for a few weeks and a default text for other weeks.
-
-<br />
-
-![screenshot](https://user-images.githubusercontent.com/25268023/74151487-93ba4c80-4c0c-11ea-951d-d1a747c10f4d.png)
-```
+These can be overridden by passing the lessons into the the `config` property, such as:
+```js
 {
-	module: 'MMM-TextPerWeek',
-	position: 'bottom_right',
-	header: 'Animal of the Week',
-	config: {
-		texts: {
-			'default': 'No animal this week',
-			7: '<img src="https://img.icons8.com/color/48/000000/budgie.png" /><br />Budgie',
-			14: '<img src="https://img.icons8.com/color/48/000000/unicorn.png" /><br />Unicorn',
-			18: '<img src="https://img.icons8.com/color/48/000000/bee.png" /><br />Bee'
-		}
-	}
-},
+  module: 'MMM-ComeFollowMeThisWeek',
+  position: 'bottom_right',
+  header: 'Come Follow Me This Week',
+  config: {
+    text: {
+      'default': 'Need to update lesson list...',
+      1: 'December 26–January 1<br />We Are Responsible for Our Own Learning',
+      2: 'January 2–8<br />Matthew 1; Luke 1',
+      3: 'January 9–15<br />Matthew 2; Luke 2',
+      // etc
+    },
+  },
+}
 ```
+
+Since there isn't an easy way to get the lists in the needed format, the lessons list will need to be created manually. I did this by copying text from the [LDS Library](https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-individuals-and-families-new-testament-2023?lang=eng).
+
+## TODOs
+
+- Look into a way to make the lesson list more dynamic.
+- Add Primary, Sunday School, and youth schedules
+- Add next year's (2024) lesson schedule
+
+## Disclaimer
+
+This module is provided "as-is" and is intended for personal use. It really isn't very robust and fills a need that I personally had and it is public for my own convenience. Suggestions and/or pull requests to fix some of the TODOs are welcome.
