@@ -1,5 +1,5 @@
 # MMM-ComeFollowMeThisWeek
-A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that shows the current "Come, Follow Me" lesson for the week (WIP). Forked from [MMM-TextPerWeek0(https://github.com/retroflex/MMM-TextPerWeek).
+A [MagicMirror²](https://github.com/MichMich/MagicMirror) module that shows the current "Come, Follow Me" lesson for the week (WIP). Forked from [MMM-TextPerWeek](https://github.com/retroflex/MMM-TextPerWeek).
 
 Thanks to [eouia](https://github.com/eouia) for writing the actual code! My contribution was just to upload it here on GitHub in case anyone else finds it useful.
 
